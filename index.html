@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Criptografia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Desafio de Criptografia</h1>
+        </header>
+        <main>
+            <section class="left-column">
+                <textarea id="inputText" placeholder="Digite seu texto aqui..."></textarea>
+                <div class="buttons">
+                    <button id="encryptButton">Criptografar</button>
+                    <button id="decryptButton">Descriptografar</button>
+                </div>
+                <button id="copyButton">Copiar</button>
+                <div id="message" class="message"></div>
+            </section>
+            <section id="resultContainer" class="right-column">
+                <img id="placeholderImage" src="img/1.png" alt="Resultado" class="placeholder-image">
+                <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 - Desenvolvido por Vander Viana</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

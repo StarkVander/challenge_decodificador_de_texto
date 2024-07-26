@@ -1,0 +1,185 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.left-column, .right-column {
+    padding: 15px;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+button#encryptButton {
+    background-color: #4caf50;
+    color: white;
+}
+
+button#decryptButton {
+    background-color: #f44336;
+    color: white;
+}
+
+button#copyButton {
+    background-color: #008cba;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: auto; 
+}
+
+.message {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#outputText {
+    display: none;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.placeholder-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .left-column, .right-column {
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 10px; 
+    }
+
+    button {
+        flex: 1;
+        margin: 0;
+        max-width: 150px; 
+    }
+
+    button#copyButton {
+        width: auto; 
+        max-width: 150px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        font-size: 14px;
+    }
+}
